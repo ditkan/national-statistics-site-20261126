@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Penduduk — NusaStat</title>
+<meta name="description" content="Jumlah penduduk Indonesia 2020–2024, provinsi terpadat, dan struktur umur — data BPS.">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/site.js"></script>
+<script src="js/render-topic.js"></script>
+</head>
+<body data-topic="population">
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">Nusa<b>Stat</b><small>Portal Statistik Nusantara</small></a>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="penduduk.html">Penduduk</a>
+      <a href="ekonomi.html">Ekonomi</a>
+      <a href="ketenagakerjaan.html">Ketenagakerjaan</a>
+      <a href="pendidikan.html">Pendidikan</a>
+      <a href="kesehatan.html">Kesehatan</a>
+      <a href="harga.html">Harga &amp; Inflasi</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <h1>Penduduk Indonesia</h1>
+    <p class="lede">281,60 juta jiwa pada 2024 — negara berpenduduk terbesar keempat di dunia. Penduduk bertambah sekitar 2,8–3,1 juta jiwa setiap tahun, dengan 68,5 persen berada pada usia produktif.</p>
+  </div>
+
+  <div class="grid-2">
+    <section class="panel">
+      <h3>Jumlah penduduk, 2020–2024</h3>
+      <p>Juta jiwa. Sensus 2020: 270,20 juta; proyeksi BPS 2024: 281,60 juta jiwa.</p>
+      <canvas class="chart" id="chart-population" height="280" role="img" aria-label="Grafik garis jumlah penduduk 2020 sampai 2024"></canvas>
+    </section>
+    <section class="panel">
+      <h3>Struktur umur, 2024</h3>
+      <p>Persen penduduk per kelompok umur (perkiraan BPS). Rasio ketergantungan: setiap 100 penduduk usia produktif menanggung sekitar 46 penduduk nonproduktif.</p>
+      <canvas class="chart" id="chart-age" height="280" role="img" aria-label="Grafik batang struktur umur 2024"></canvas>
+    </section>
+  </div>
+
+  <h2>Provinsi terpadat, 2024</h2>
+  <p class="section-note">Klik judul kolom untuk mengurutkan. Ketik di kotak pencarian atau pilih provinsi untuk menyaring tabel.</p>
+  <div class="controls">
+    <label for="search-box">Cari provinsi:</label>
+    <input type="search" id="search-box" placeholder="mis. Jawa, Sumatera, Kalimantan…" aria-label="Cari provinsi">
+    <label for="province-filter">Tampilkan:</label>
+    <select id="province-filter" aria-label="Saring provinsi">
+      <option value="">Semua provinsi</option>
+    </select>
+    <span class="spacer"></span>
+    <span class="row-count">12 baris ditampilkan</span>
+  </div>
+  <div class="table-card">
+    <table id="province-table" class="sortable">
+      <thead><tr><th>#</th><th>Provinsi</th><th class="num" data-numeric="true">Penduduk (juta)</th><th class="num" data-numeric="true">Pangsa nasional</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <p class="empty-note">Tidak ada provinsi yang cocok dengan pencarian Anda.</p>
+    <p class="source">Sumber: BPS, proyeksi penduduk pertengahan tahun 2024 (perkiraan, dibulatkan ke 0,01 juta). Tabel menampilkan 12 provinsi terpadat; total nasional 281,60 juta jiwa.</p>
+  </div>
+
+  <section class="source-box">
+    <h2>Sumber &amp; catatan</h2>
+    <p>Jumlah penduduk: Sensus Penduduk 2020 dan proyeksi penduduk BPS 2020–2024. Kepadatan penduduk nasional sekitar 149 jiwa per km² (luas daratan 1.892.555 km²). Laki-laki sekitar 141,9 juta jiwa dan perempuan sekitar 139,7 juta jiwa (perkiraan BPS 2024).</p>
+  </section>
+
+  <footer>
+    <p><strong>NusaStat — Portal Statistik Nusantara.</strong> Data: BPS. NusaStat bukan situs resmi pemerintah.</p>
+    <p><a href="index.html">← Kembali ke Beranda</a> · <a href="ekonomi.html">Lanjut ke Ekonomi →</a></p>
+  </footer>
+</main>
+</body>
+</html>

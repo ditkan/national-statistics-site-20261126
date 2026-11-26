@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NusaStat — Portal Statistik Indonesia</title>
+<meta name="description" content="NusaStat: angka-angka utama Indonesia — penduduk, ekonomi, ketenagakerjaan, pendidikan, kesehatan, dan harga — dari data BPS dan Kemenkes, lengkap dengan grafik dan tabel.">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/site.js"></script>
+<script src="js/render-home.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">Nusa<b>Stat</b><small>Portal Statistik Nusantara</small></a>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="penduduk.html">Penduduk</a>
+      <a href="ekonomi.html">Ekonomi</a>
+      <a href="ketenagakerjaan.html">Ketenagakerjaan</a>
+      <a href="pendidikan.html">Pendidikan</a>
+      <a href="kesehatan.html">Kesehatan</a>
+      <a href="harga.html">Harga &amp; Inflasi</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Indonesia dalam angka, 2020–2024</h1>
+    <p>Portal statistik Indonesia yang ringkas: penduduk, ekonomi, lapangan kerja, pendidikan, kesehatan, dan harga — setiap angka disertai sumber dan tahunnya, lengkap dengan grafik dan tabel yang bisa dijelajahi.</p>
+    <span class="updated">Data terbaru: 2024 · Sumber utama: Badan Pusat Statistik (BPS)</span>
+  </section>
+
+  <div class="controls">
+    <label for="year-select">Tahun data:</label>
+    <select id="year-select" class="year-select" aria-label="Pilih tahun data"></select>
+    <span class="spacer"></span>
+    <span class="row-count">Delapan indikator utama tahun <strong id="kpi-year">2024</strong></span>
+  </div>
+
+  <section class="kpi-grid" id="kpi-grid" aria-label="Indikator utama"></section>
+
+  <h2>Tren lima tahun</h2>
+  <p class="section-note">Penduduk terus bertambah sekitar 1 persen per tahun, sementara ekonomi tumbuh stabil di atas 5 persen setelah kontraksi 2020.</p>
+  <div class="grid-2">
+    <section class="panel">
+      <h3>Jumlah penduduk, 2020–2024</h3>
+      <p>Juta jiwa. Sensus Penduduk 2020 mencatat 270,20 juta jiwa; proyeksi BPS 2024 mencapai 281,60 juta jiwa.</p>
+      <canvas class="chart" id="chart-population" height="280" role="img" aria-label="Grafik garis jumlah penduduk 2020 sampai 2024"></canvas>
+    </section>
+    <section class="panel">
+      <h3>PDB harga berlaku, 2020–2024</h3>
+      <p>Rp triliun. PDB 2024 Rp22.139,0 triliun; PDB per kapita Rp78,6 juta atau sekitar US$4.960.</p>
+      <canvas class="chart" id="chart-gdp" height="280" role="img" aria-label="Grafik batang PDB 2020 sampai 2024"></canvas>
+    </section>
+    <section class="panel wide">
+      <h3>Pertumbuhan ekonomi, 2020–2024</h3>
+      <p>Persen year-on-year. Ekonomi terkontraksi 2,07 persen pada 2020, lalu tumbuh 3,70 persen (2021), 5,31 persen (2022), 5,05 persen (2023), dan 5,03 persen (2024).</p>
+      <canvas class="chart" id="chart-growth" height="240" role="img" aria-label="Grafik garis pertumbuhan ekonomi 2020 sampai 2024"></canvas>
+    </section>
+  </div>
+
+  <h2>Sorotan 2024</h2>
+  <div class="insights">
+    <article class="insight">
+      <strong>Inflasi terendah dua dekade</strong>
+      <p>Inflasi Desember 2024 hanya 1,57 persen (y-on-y), terendah sejak 2020, setelah sempat menyentuh 3,05 persen pada Maret 2024. Sumber: BPS, IHK Desember 2024.</p>
+    </article>
+    <article class="insight">
+      <strong>Pengangguran di bawah 5 persen</strong>
+      <p>Tingkat pengangguran terbuka Agustus 2024 sebesar 4,91 persen — di bawah level sebelum pandemi (5,23 persen pada 2019). Angkatan kerja 152,1 juta jiwa. Sumber: BPS, Sakernas.</p>
+    </article>
+    <article class="insight">
+      <strong>Kemiskinan 8,57 persen</strong>
+      <p>Persentase penduduk miskin September 2024 sebesar 8,57 persen (24,06 juta jiwa), terendah sepanjang sejarah pencatatan. Rasio gini membaik ke 0,379. Sumber: BPS, Susenas.</p>
+    </article>
+  </div>
+
+  <h2>Provinsi terpadat</h2>
+  <p class="section-note">Lebih dari separuh penduduk Indonesia tinggal di Pulau Jawa. Lima provinsi terpadat menguasai 58,2 persen penduduk nasional.</p>
+  <div class="table-card">
+    <table id="top-provinces" class="sortable">
+      <thead><tr><th>#</th><th>Provinsi</th><th class="num" data-numeric="true">Penduduk (juta)</th><th class="num" data-numeric="true">Pangsa</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <p class="source">Sumber: BPS, proyeksi penduduk pertengahan tahun 2024 (perkiraan). <a href="penduduk.html">Lihat 12 provinsi terpadat →</a></p>
+  </div>
+
+  <section class="source-box">
+    <h2>Tentang data di situs ini</h2>
+    <p>NusaStat adalah portal statistik independen yang menyusun ulang angka-angka resmi agar mudah dibaca. Angka-angka di sini berasal dari publikasi resmi pemerintah dan dikutip dengan sumber serta tahunnya di setiap bagian.</p>
+    <ul>
+      <li>Badan Pusat Statistik (BPS) — penduduk, PDB, inflasi, ketenagakerjaan, kemiskinan, IPM.</li>
+      <li>Kementerian Kesehatan (SSGI 2024) — prevalensi stunting balita.</li>
+      <li>Angka bertanda “perkiraan” adalah pembulatan angka resmi, bukan angka baru.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p><strong>NusaStat — Portal Statistik Nusantara.</strong> Situs statis independen; seluruh data tersimpan di file situs ini dan tidak mengambil apa pun dari jaringan.</p>
+    <p>Data: BPS dan Kementerian Kesehatan RI. NusaStat bukan situs resmi pemerintah.</p>
+  </footer>
+</main>
+</body>
+</html>

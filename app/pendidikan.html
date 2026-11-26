@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pendidikan — NusaStat</title>
+<meta name="description" content="IPM, harapan lama sekolah, dan rata-rata lama sekolah Indonesia 2020–2024 — data BPS.">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/site.js"></script>
+<script src="js/render-topic.js"></script>
+</head>
+<body data-topic="education">
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">Nusa<b>Stat</b><small>Portal Statistik Nusantara</small></a>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="penduduk.html">Penduduk</a>
+      <a href="ekonomi.html">Ekonomi</a>
+      <a href="ketenagakerjaan.html">Ketenagakerjaan</a>
+      <a href="pendidikan.html">Pendidikan</a>
+      <a href="kesehatan.html">Kesehatan</a>
+      <a href="harga.html">Harga &amp; Inflasi</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <h1>Pendidikan</h1>
+    <p class="lede">Indeks Pembangunan Manusia (IPM) 2024 mencapai 75,02 — kategori tinggi. Harapan lama sekolah 13,21 tahun, sementara rata-rata lama sekolah penduduk usia 25 tahun ke atas baru 8,85 tahun, setara kelas 3 SMP.</p>
+  </div>
+
+  <div class="grid-2">
+    <section class="panel">
+      <h3>Indeks Pembangunan Manusia, 2020–2024</h3>
+      <p>Skala 0–100. IPM naik dari 72,81 (2020) menjadi 75,02 (2024); naik 0,63 poin pada 2024, didorong semua dimensi pembentuknya.</p>
+      <canvas class="chart" id="chart-hdi" height="280" role="img" aria-label="Grafik garis IPM 2020 sampai 2024"></canvas>
+    </section>
+    <section class="panel">
+      <h3>Harapan lama sekolah, 2020–2024</h3>
+      <p>Tahun. Anak usia 7 tahun pada 2024 diharapkan bersekolah 13,21 tahun — setara tahun kedua perguruan tinggi.</p>
+      <canvas class="chart" id="chart-schooling" height="280" role="img" aria-label="Grafik garis harapan lama sekolah 2020 sampai 2024"></canvas>
+    </section>
+    <section class="panel wide">
+      <h3>Rata-rata lama sekolah, 2020–2024</h3>
+      <p>Tahun, penduduk usia 25 tahun ke atas. Rata-rata lama sekolah naik dari 8,48 tahun (2020) menjadi 8,85 tahun (2024) — masih setara SMP.</p>
+      <canvas class="chart" id="chart-mean-schooling" height="240" role="img" aria-label="Grafik batang rata-rata lama sekolah 2020 sampai 2024"></canvas>
+    </section>
+  </div>
+
+  <h2>Komponen IPM per tahun</h2>
+  <p class="section-note">Klik judul kolom untuk mengurutkan tabel.</p>
+  <div class="table-card">
+    <table class="sortable">
+      <thead><tr><th class="num" data-numeric="true">Tahun</th><th class="num" data-numeric="true">IPM</th><th class="num" data-numeric="true">Umur harapan hidup (th)</th><th class="num" data-numeric="true">Harapan lama sekolah (th)</th><th class="num" data-numeric="true">Rata-rata lama sekolah (th)</th><th class="num" data-numeric="true">Pengeluaran riil/kapita (Rp jt)</th></tr></thead>
+      <tbody>
+        <tr><td class="num">2020</td><td class="num">72,81</td><td class="num">73,37</td><td class="num">12,98</td><td class="num">8,48</td><td class="num">11,01</td></tr>
+        <tr><td class="num">2021</td><td class="num">72,77</td><td class="num">73,53</td><td class="num">13,00</td><td class="num">8,54</td><td class="num">11,34</td></tr>
+        <tr><td class="num">2022</td><td class="num">73,77</td><td class="num">73,71</td><td class="num">13,10</td><td class="num">8,69</td><td class="num">11,73</td></tr>
+        <tr><td class="num">2023</td><td class="num">74,39</td><td class="num">73,93</td><td class="num">13,15</td><td class="num">8,77</td><td class="num">11,90</td></tr>
+        <tr><td class="num">2024</td><td class="num">75,02</td><td class="num">74,15</td><td class="num">13,21</td><td class="num">8,85</td><td class="num">12,34</td></tr>
+      </tbody>
+    </table>
+    <p class="source">Sumber: BPS, Berita Resmi Statistik IPM 2024 (rilis 15 November 2024). Pengeluaran riil per kapita per tahun yang disesuaikan.</p>
+  </div>
+
+  <section class="source-box">
+    <h2>Sumber &amp; catatan</h2>
+    <p>Kesenjangan antarwilayah masih lebar: harapan lama sekolah tertinggi di DI Yogyakarta (15,70 tahun) dan terendah di Papua Tengah (9,63 tahun) pada 2024. Sejak 2024 BPS menyajikan IPM untuk 38 provinsi. Sumber: BPS, IPM 2024.</p>
+  </section>
+
+  <footer>
+    <p><strong>NusaStat — Portal Statistik Nusantara.</strong> Data: BPS. NusaStat bukan situs resmi pemerintah.</p>
+    <p><a href="ketenagakerjaan.html">← Kembali ke Ketenagakerjaan</a> · <a href="kesehatan.html">Lanjut ke Kesehatan →</a></p>
+  </footer>
+</main>
+</body>
+</html>

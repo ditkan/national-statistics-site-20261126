@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harga &amp; Inflasi — NusaStat</title>
+<meta name="description" content="Inflasi bulanan dan tahunan Indonesia 2020–2024 serta harga pangan pokok — data BPS.">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/site.js"></script>
+<script src="js/render-topic.js"></script>
+</head>
+<body data-topic="prices">
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">Nusa<b>Stat</b><small>Portal Statistik Nusantara</small></a>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="penduduk.html">Penduduk</a>
+      <a href="ekonomi.html">Ekonomi</a>
+      <a href="ketenagakerjaan.html">Ketenagakerjaan</a>
+      <a href="pendidikan.html">Pendidikan</a>
+      <a href="kesehatan.html">Kesehatan</a>
+      <a href="harga.html">Harga &amp; Inflasi</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <h1>Harga &amp; Inflasi</h1>
+    <p class="lede">Inflasi 2024 mereda sepanjang tahun: dari 3,05 persen pada Maret menjadi 1,57 persen pada Desember (y-on-y) — terendah dalam dua dekade di luar masa pandemi. Nilai tukar petani Desember 2024 tercatat 122,78.</p>
+  </div>
+
+  <div class="grid-2">
+    <section class="panel">
+      <h3>Inflasi bulanan (y-on-y), 2024</h3>
+      <p>Persen. Inflasi memuncak pada Maret (3,05 persen) lalu menurun hampir setiap bulan hingga 1,57 persen pada Desember.</p>
+      <canvas class="chart" id="chart-inflation-monthly" height="280" role="img" aria-label="Grafik garis inflasi bulanan 2024"></canvas>
+    </section>
+    <section class="panel">
+      <h3>Inflasi Desember (y-on-y), 2020–2024</h3>
+      <p>Persen. Inflasi 2022 melonjak ke 5,51 persen, lalu kembali ke sasaran Bank Indonesia: 2,61 persen (2023) dan 1,57 persen (2024).</p>
+      <canvas class="chart" id="chart-inflation-annual" height="280" role="img" aria-label="Grafik batang inflasi Desember 2020 sampai 2024"></canvas>
+    </section>
+  </div>
+
+  <h2>Harga pangan pokok, Desember 2024</h2>
+  <p class="section-note">Perkiraan harga rata-rata nasional dari pantauan harga (Rp per kg). Klik judul kolom untuk mengurutkan; gunakan kotak pencarian untuk mencari komoditas.</p>
+  <div class="controls">
+    <label for="search-box">Cari komoditas:</label>
+    <input type="search" id="search-box" placeholder="mis. beras, cabai, telur…" aria-label="Cari komoditas">
+    <span class="spacer"></span>
+    <span class="row-count">10 baris ditampilkan</span>
+  </div>
+  <div class="table-card">
+    <table id="food-table" class="sortable">
+      <thead><tr><th>Komoditas</th><th class="num" data-numeric="true">Harga (Rp)</th><th>Satuan</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <p class="empty-note">Tidak ada komoditas yang cocok dengan pencarian Anda.</p>
+    <p class="source">Sumber: pantauan harga BPS / PIHPS, Desember 2024 (perkiraan, dibulatkan). Harga dapat berbeda antar daerah.</p>
+  </div>
+
+  <section class="source-box">
+    <h2>Sumber &amp; catatan</h2>
+    <p>Inflasi provinsi y-on-y tertinggi Desember 2024 terjadi di Papua Pegunungan (5,36 persen) dan terendah di Sulawesi Utara (0,44 persen). Ekspor Desember 2024 US$23,46 miliar; neraca perdagangan surplus US$2,24 miliar pada bulan itu. Sumber: BPS, Laporan Bulanan Data Sosial Ekonomi Desember 2024.</p>
+  </section>
+
+  <footer>
+    <p><strong>NusaStat — Portal Statistik Nusantara.</strong> Data: BPS. NusaStat bukan situs resmi pemerintah.</p>
+    <p><a href="kesehatan.html">← Kembali ke Kesehatan</a> · <a href="index.html">Kembali ke Beranda →</a></p>
+  </footer>
+</main>
+</body>
+</html>
